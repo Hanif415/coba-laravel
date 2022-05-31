@@ -8,5 +8,6 @@
 </head>
 <body>
     <h1>Halaman About</h1>
+    <img src="img/yukiko.jpg" alt="yukiko" width="300">
 </body>
 </html>
