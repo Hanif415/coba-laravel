@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PostController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,4 +32,11 @@ Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 
 Route::get('/categories', function(){
     return view('categories');
+});
+
+Route::get('author/{user}', function(User $user){
+    return view('posts', [
+        'title' => 'User Posts',
+        'posts' => $user->posts
+    ]);
 });
