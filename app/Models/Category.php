@@ -9,6 +9,6 @@ class Category extends Model
     protected $guarded = ['id'];
 
     public function posts(){
-        $this->hasMany(Post::class);
+        return $this->hasMany(Post::class);
     }
 }
