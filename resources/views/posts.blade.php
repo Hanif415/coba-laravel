@@ -42,9 +42,9 @@
             <div class="row">
                 @foreach ($posts->skip(1) as $post)
                     <div class="col-md-4 mb-3">
-                        <div class="card" style="width: 18rem;">
+                        <div class="card" style="width: 22rem;">
                             <div class="position-absolute px-3 py-2" style="background-color: rgba(0, 0, 0, 0.7)"><a href="/posts?category={{ $post->category->slug }}" class="text-decoration-none text-white">{{ $post->category->name }}</a></div>
-                            <img src="https://source.unsplash.com/500x300?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
+                            <img src="https://source.unsplash.com/600x300?{{ $post->category->name }}" class="card-img-top" alt="{{ $post->category->name }}">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $post->title }}</h5>
                                 <p>
@@ -66,5 +66,9 @@
         <p class="text-center fs-4">No post found</p>
 
     @endif
+
+    <div class="d-flex justify-content-end">
+        {{ $posts->links() }}
+    </div>
 
 @endsection
