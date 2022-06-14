@@ -8,11 +8,11 @@
                 <form action="/login" method="POST">
                     @csrf
                     <div class="form-floating">
-                        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+                        <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com">
                         <label for="floatingInput">Email address</label>
                     </div>
                     <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" id="floatingPassword" placeholder="Password">
                         <label for="floatingPassword">Password</label>
                     </div>
             
