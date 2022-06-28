@@ -27,7 +27,7 @@
                 Welcome back, {{ auth()->user()->name }}
               </a>
               <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="/dashboard">Dashboard</a></li>
                 <li class="dropdown-divider"></li>
                 <form action="/logout" method="POST">
                   @csrf
